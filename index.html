@@ -215,13 +215,8 @@
     .brand .logo {
       width: 64px;
       height: 64px;
-      filter: drop-shadow(0 0 8px rgba(255, 204, 51, 0.5));
-      transition: all 0.3s ease;
     }
-    .brand .logo:hover{
-      transform: scale(1.05) rotate(5deg);
-      filter: drop-shadow(0 0 12px rgba(255, 204, 51, 0.8));
-    }
+
 
     .stats{display:flex;align-items:center;gap:10px;flex-wrap: wrap}
     .pill{
@@ -1273,6 +1268,7 @@ updateUI();
 // Graphics quality event listeners
 highGraphics.addEventListener('click', () => {
   playSound('button');
+  buttonSound.currentTime = 0;
   setGraphicsQuality('high');
   notify('High graphics enabled! Full visual effects active.', 2000);
 });
